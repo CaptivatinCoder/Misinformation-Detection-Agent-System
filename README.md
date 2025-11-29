@@ -1,12 +1,14 @@
 # 🛡️ Misinformation Detection Agent System
 
+![Misinformation Detection Agent System](Diagrams/card.png)
+
 **Track**: Agents for Good  
 **Problem**: Misinformation and Disinformation Detection  
 **Solution**: Multi‑Agent AI System with Multi‑Source Verification and Interactive Evaluation UI  
 
-Misinformation and disinformation are a top global risk. This project builds a **multi‑agent misinformation detection system** powered by Gemini and the Google ADK that can analyze arbitrary content, verify claims against multiple sources, assess source credibility, and produce an **explainable verdict**.
+Misinformation and disinformation are a growing risk for public health, climate action, and trust in institutions. This repository contains a **misinformation detection agent built with Gemini and the Google ADK**. The system analyzes content, extracts claims, checks those claims against several sources, scores the credibility of the publisher, and returns an **explainable verdict** with a credibility score and risk level.
 
-The implementation lives in `misinformation-detector-final-version-2 (Final).ipynb` and is mirrored as `FINAL_KAGGLE_NOTEBOOK.md`.
+ The main implementation is in `misinformation-detector-final-version-2.ipynb`
 
 ---
 
@@ -14,7 +16,7 @@ The implementation lives in `misinformation-detector-final-version-2 (Final).ipy
 
 Modern information ecosystems are flooded with **misleading or fabricated content**:
 
-- False health claims (“vaccines cause autism”).
+- False health claims.
 - Climate denial and conspiracy theories.
 - Misleading or cherry‑picked statistics.
 - Fake or distorted government announcements.
@@ -153,7 +155,7 @@ All orchestration is wrapped in a single class:
 
 ## 5. Key ADK Concepts Demonstrated
 
-This project intentionally covers **more than three** core features from the course:
+The project makes use of the following ADK concepts:
 
 1. **Multi-Agent System**  
    - 4 sub‑agents + orchestrator, combining parallel and sequential flows.
@@ -291,4 +293,4 @@ This provides a **visual, interactive way** to explore the agent’s behavior an
 - **Solution**: Multi‑Agent AI System with Multi‑Source Verification and Interactive Evaluation UI  
 - **Concepts Demonstrated**: Multi‑agent architecture, four tool categories, long‑running operations, sessions & memory, context engineering, observability, A2A protocol, deployment.
 
-This project aims to demonstrate **both** a strong conceptual pitch (“Agents for Good” tackling misinformation) and a **production‑style implementation** that can be realistically extended and deployed.
+In short, this is a practical, end‑to‑end example of how to use agents, tools, and Gemini to reason about the credibility of online content.
