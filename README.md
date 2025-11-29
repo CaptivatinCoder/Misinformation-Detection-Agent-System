@@ -1,6 +1,6 @@
 # 🛡️ Misinformation Detection Agent System
 
-![Misinformation Detection Agent System](Diagrams/card.png)
+![Misinformation Detection Agent System](Diagrams/card)
 
 **Track**: Agents for Good  
 **Problem**: Misinformation and Disinformation Detection  
