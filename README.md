@@ -60,24 +60,29 @@ This architecture makes the solution:
 ### 3.1 High-Level Flow
 
 ```
-User Content
-   │
-   ▼
-Content Analyzer Agent  ──► Claims + emotional & bias signals
-   │
-   ├─────────► Source Verifier Agent (in parallel, if source URL provided)
-   │
-   └─────────► Fact Checker Agent
-                  │
-                  ├─ WebSearchTool (Custom Google Search)
-                  ├─ ADK google_search (built-in)
-                  ├─ MCP Fact Check Tool
-                  └─ OpenAPI Fact Check Tool
-   │
-   ▼
-Orchestrator Agent (RateLimitedDetector)
-   ▼
-Verdict + Credibility Score + Risk Level + Reasoning + Evidence Summary
+                    User Content
+                         │
+                         ▼
+            Content Analyzer Agent
+                         │
+         ┌───────────────┴───────────────┐
+         │                               │
+         ▼                               ▼
+Source Verifier Agent          Fact Checker Agent
+(if source URL provided)                 │
+         │                               ├──► WebSearchTool (Custom Google Search)
+         │                               ├──► ADK google_search (built-in)
+         │                               ├──► MCP Fact Check Tool
+         │                               └──► OpenAPI Fact Check Tool
+         │                               │
+         └───────────────┬───────────────┘
+                         │
+                         ▼
+         Orchestrator Agent (RateLimitedDetector)
+                         │
+                         ▼
+         Verdict + Credibility Score + Risk Level + 
+         Reasoning + Evidence Summary
 ```
 
 ### 3.2 Core Detector
