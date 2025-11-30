@@ -59,6 +59,7 @@ This architecture makes the solution:
 
 ### 3.1 High-Level Flow
 
+```
 User Content
    │
    ▼
@@ -76,7 +77,10 @@ Content Analyzer Agent  ──► Claims + emotional & bias signals
    ▼
 Orchestrator Agent (RateLimitedDetector)
    ▼
-Verdict + Credibility Score + Risk Level + Reasoning + Evidence Summary### 3.2 Core Detector
+Verdict + Credibility Score + Risk Level + Reasoning + Evidence Summary
+```
+
+### 3.2 Core Detector
 
 All orchestration is wrapped in a single class:
 
@@ -101,7 +105,6 @@ All orchestration is wrapped in a single class:
 - `content_analysis`, `fact_check_results`, `source_verification`.
 
 ---
-
 ## 4. Agents & Key Features
 
 ### 4.1 Content Analyzer Agent
